@@ -1,0 +1,30 @@
+{% extends 'user/dash.html' %}
+{% block content %}
+
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Available Workout Sessions</h4>
+       <table class="table" >
+         <thead>
+    <tr>
+      <th>SI.NO</th>
+      <th>Name</th>
+      <th>Calorie</th>
+
+    </tr>
+         </thead>
+           <tbody>
+    {% for i in data %}
+    <tr>
+      <td>{{forloop.counter}}</td>
+      <td>{{i.name}}</td>
+      <td>{{i.calories}}</td>
+
+    </tr>
+    {% endfor %}
+   </tbody>
+  </table>
+   </div>
+</div>
+
+{% endblock %}

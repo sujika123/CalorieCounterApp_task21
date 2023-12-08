@@ -1,0 +1,9 @@
+{% extends 'user/dash.html' %}
+{% block content %}
+
+<div class="card" style="color:black">
+ <h1>Meal Added Successfully!</h1>
+    <p>Total Calories: {{ total_calories }}</p>
+    <a href="{% url 'add_meal' %}">Back</a>
+</div>
+{% endblock %}

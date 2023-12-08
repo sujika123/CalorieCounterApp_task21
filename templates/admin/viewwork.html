@@ -1,0 +1,30 @@
+{% extends 'admin/dash.html' %}
+{% block content %}
+
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Available Workout Sessions</h4>
+       <table class="table" >
+         <thead>
+    <tr>
+      <th>SI.NO</th>
+      <th>Name</th>
+      <th>Calorie</th>
+      <th>Edit</th>
+    </tr>
+         </thead>
+           <tbody>
+    {% for i in data %}
+    <tr>
+      <td>{{forloop.counter}}</td>
+      <td>{{i.name}}</td>
+      <td>{{i.calories}}</td>
+      <td><a href="{% url 'deletework' i.id %}" class="btn btn-danger">Delete</a></td>
+    </tr>
+    {% endfor %}
+   </tbody>
+  </table>
+   </div>
+</div>
+
+{% endblock %}

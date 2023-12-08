@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Pluto - Responsive Bootstrap Admin Panel Templates</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icon -->
+      <link rel="icon" href="{% static 'login/images/fevicon.png' %}" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="{% static 'login/css/bootstrap.min.css' %}" />
+      <!-- site css -->
+      <link rel="stylesheet" href="{% static 'login/style.css' %}" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="{% static 'login/css/responsive.css' %}" />
+      <!-- color css -->
+      <link rel="stylesheet" href="{% static 'login/css/colors.css' %}" />
+      <!-- select bootstrap -->
+      <link rel="stylesheet" href="{% static 'login/css/bootstrap-select.css' %}" />
+      <!-- scrollbar css -->
+      <link rel="stylesheet" href="{% static 'login/css/perfect-scrollbar.css' %}" />
+      <!-- custom css -->
+      <link rel="stylesheet" href="{% static 'login/css/custom.css' %}" />
+      <!-- calendar file css -->
+      <link rel="stylesheet" href="{% static 'login/js/semantic.min.css' %}" />
+
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css' %}" />
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+       <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+
+<!--nav start-->
+<header class="header_area">
+      <div class="main_menu">
+<!--        <div class="search_input" id="search_input_box">-->
+<!--          <div class="container">-->
+<!--            <form class="d-flex justify-content-between" method="" action="">-->
+<!--              <input-->
+<!--                type="text"-->
+<!--                class="form-control"-->
+<!--                id="search_input"-->
+<!--                placeholder="Search Here"-->
+<!--              />-->
+<!--              <button type="submit" class="btn"></button>-->
+<!--              <span-->
+<!--                class="ti-close"-->
+<!--                id="close_search"-->
+<!--                title="Close Search"-->
+<!--              ></span>-->
+<!--            </form>-->
+<!--          </div>-->
+<!--        </div>-->
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+<!--            <a class="navbar-brand logo_h" href="index.html"-->
+<!--              ><img src="{% static 'img/logo.png' %}" alt=""-->
+<!--            /></a>-->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="icon-bar"></span> <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div
+              class="collapse navbar-collapse offset"
+              id="navbarSupportedContent"
+            >
+              <ul class="nav navbar-nav menu_nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'loginview' %}">Login</a>
+                </li>
+<!--                <li class="nav-item submenu dropdown">-->
+<!--                  <a-->
+<!--                    href="#"-->
+<!--                    class="nav-link dropdown-toggle"-->
+<!--                    data-toggle="dropdown"-->
+<!--                    role="button"-->
+<!--                    aria-haspopup="true"-->
+<!--                    aria-expanded="false"-->
+<!--                    >Pages</a-->
+<!--                  >-->
+<!--                  <ul class="dropdown-menu">-->
+<!--                    <li class="nav-item">-->
+<!--                      <a class="nav-link" href="courses.html">Courses</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                      <a class="nav-link" href="course-details.html"-->
+<!--                        >Course Details</a-->
+<!--                      >-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                      <a class="nav-link" href="elements.html">Elements</a>-->
+<!--                    </li>-->
+<!--                  </ul>-->
+<!--                </li>-->
+<!--                <li class="nav-item submenu dropdown">-->
+<!--                  <a-->
+<!--                    href="#"-->
+<!--                    class="nav-link dropdown-toggle"-->
+<!--                    data-toggle="dropdown"-->
+<!--                    role="button"-->
+<!--                    aria-haspopup="true"-->
+<!--                    aria-expanded="false"-->
+<!--                    >Blog</a-->
+<!--                  >-->
+<!--                  <ul class="dropdown-menu">-->
+<!--                    <li class="nav-item">-->
+<!--                      <a class="nav-link" href="blog.html">Blog</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                      <a class="nav-link" href="single-blog.html"-->
+<!--                        >Blog Details</a-->
+<!--                      >-->
+<!--                    </li>-->
+<!--                  </ul>-->
+<!--                </li>-->
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'register' %}">Registration</a>
+                </li>
+<!--                <li class="nav-item">-->
+<!--                  <a href="#" class="nav-link search" id="search">-->
+<!--                    <i class="ti-search"></i>-->
+<!--                  </a>-->
+<!--                </li>-->
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+<!--nav end-->
+
+   <body class="inner_page login">
+    <div class="full_container">
+         <div class="container">
+            <div class="center verticle_center full_height">
+               <div class="login_section">
+                  <div class="logo_login">
+<!--                     <div class="center">-->
+<!--                        <img width="210" src="{% static 'images/logo/logo.png' %}" alt="#" />-->
+<!--                     </div>-->
+                  </div>
+                  <div class="login_form">
+                     <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <fieldset>
+                           <div class="field">
+                              <label class="label_field">User Name</label>
+                              <input type="text" name="uname" placeholder="Username" />
+                           </div>
+                           <div class="field">
+                              <label class="label_field">Password</label>
+                              <input type="password" name="pass" placeholder="Password" />
+                           </div>
+                           <div class="field">
+                              <label class="label_field hidden">hidden label</label>
+                              <label class="form-check-label"><input type="checkbox" class="form-check-input"> Remember Me</label>
+<!--                              <a class="forgot" href="">Forgotten Password?</a>-->
+                           </div>
+                           <div class="field margin_0">
+                              <label class="label_field hidden">hidden label</label>
+                              <button class="main_bt" type="submit">Sign In</button>
+                           </div>
+                        </fieldset>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+      <!-- jQuery -->
+      <script src="{% static 'login/js/jquery.min.js' %}"></script>
+      <script src="{% static 'login/js/popper.min.js' %}"></script>
+      <script src="{% static 'login/js/bootstrap.min.js' %}"></script>
+      <!-- wow animation -->
+      <script src="{% static 'login/js/animate.js' %}"></script>
+      <!-- select country -->
+      <script src="{% static 'login/js/bootstrap-select.js' %}"></script>
+      <!-- nice scrollbar -->
+      <script src="{% static 'login/js/perfect-scrollbar.min.js' %}"></script>
+      <script>
+         var ps = new PerfectScrollbar('#sidebar');
+      </script>
+      <!-- custom js -->
+      <script src="{% static 'login/js/custom.js' %}"></script>
+   </body>
+</html>

@@ -1,0 +1,21 @@
+{% extends 'user/dash.html' %}
+{% block content %}
+<div class="card">
+    <br>
+    <div>
+    <h1 class="text-center" style="color:black;">PROFILE VIEW</h1><br>
+<form method="post" enctype="multipart/form-data" style="color:black;margin-left:500px;">
+    {% csrf_token %}
+    {% for i in data %}
+    <p>Name : {{i.name}}</p>
+    <p>Age : {{i.age}}</p>
+    <p>Phone : {{i.phone}}</p>
+    <p>Address : {{i.address}}</p>
+<!--    <a href="{% url 'profileupdate' i.id %}"><button class="btn btn-primary" type="submit">UPDATE</button> </a>-->
+    <a href="{% url 'profileupdate' i.id %}" class="btn btn-primary">UPDATE</a>
+    <br><br>
+    {% endfor %}
+</form>
+    </div>
+</div>
+{% endblock %}

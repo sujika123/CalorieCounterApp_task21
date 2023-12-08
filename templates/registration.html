@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load crispy_forms_filters %}
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'dash/css/bootstrap.min.css' %}" />
+</head>
+<body>
+<div style="margin-top:25px;margin-left:25px;">
+<a href = "{% url 'home' %}"><button class="btn btn-info">< Home</button></a>
+</div>
+<form method="post" enctype="multipart/form-data" style="margin-left:550px;margin-top:30px;width:450px;background-color:white;color:black;">
+  <h2 style="color:blue;">Registration</h2>
+  {% csrf_token %}
+  {{form|crispy}}
+  {{form1|crispy}}
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+
+</body>
+</html>

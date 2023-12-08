@@ -1,0 +1,26 @@
+{% extends 'user/dash.html' %}
+{% block content %}
+
+
+<div class="card" style="color:black">
+    <h1 style="margin-left:100px;">Add a Meal</h1>
+    <div style="margin-left:100px;">
+    <form method="post" action="{% url 'add_meal' %}">
+        {% csrf_token %}
+        <label for="foods">Select Foods:</label><br>
+        <select name="foods" id="foods" multiple>
+            {% for food in foods %}
+                <option value="{{ food.id }}">{{ food.name }} - {{ food.calories }} calories</option>
+            {% endfor %}
+        </select><br><br>
+        <label for="date">Date:</label><br>
+        <input type="date" name="date" id="date"><br><br>
+        <input type="submit" value="Add Meal">
+    </form>
+        <br>
+    <a href="{% url 'userhome' %}">Back to home</a>
+        <br><br>
+     </div>
+</div>
+
+{% endblock %}
